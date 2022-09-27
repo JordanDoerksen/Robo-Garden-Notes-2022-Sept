@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <link rel="stylesheet" href="./global.css">
+        <link rel="stylesheet" href="./css-notes.css">
+
+        <title>
+            Robo Garden Notes | GIT
+        </title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./git-notes.html">GIT</a></li>
+                    <li><a href="./html-notes.html">HTML</a></li>
+                    <li><a href="./css-notes.html">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="main-content">
+
+
+            <h1>CSS Notes</h1>
+
+            <div>
+                <h2>IMPORTANT</h2>
+                <ul>
+                    <li>Width usually is determined by parent</li>
+
+                </ul>
+            </div>
+
+
+            <h2>There are 4 main display behaviors (Types of rendering box)</h2>
+
+            <ul class="no-bullets">
+                <li>
+                    <h3><code>display: none;</code></h3>
+                    <ul>
+                        <li>Elements will not be rendered (but still exist in the DOM)</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><code>display: inline;</code></h3>
+                    <ul>
+                        <li>Elements will not start on a new line (No line break before element)</li>
+                        <li>Elements will only take as much width as necessary (Width depends on content)</li>
+                        <li>Width and Height properties will have no effect</li>
+                        <li>Default for elements <code>&lt;span&gt;,&lt;a&gt;,&lt;img&gt;</code></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><code>display: block;</code></h3>
+                    <ul>
+                        <li>Element will always start on a new line (Line break comes before element)</li>
+                        <li>Element takes up all available width (Inherit from parents, Default HTML behavior)</li>
+                        <li>Element takes up as little height as possible to show content (Inherit from child, Default HTML behavior)</li>
+                        <li>Width and Height properties can be set</li>
+                        <li><code>&lt;div&gt;,&lt;h1&gt;-&lt;h6&gt;,&lt;p&gt;,&lt;form&gt;,&lt;header&gt;,&lt;footer&gt;,&lt;section&gt;</code></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><code>display: inline-block;</code></h3>
+                    <ul>
+                        <li>Element will not start on new line (Just like <code>display: inline;</code>)</li>
+                        <li>Element will only take as much width as necessary  (Just like <code>display: inline;</code>)</li>
+                        <li>Width and Height properties can be set. (Just like <code>display: block;</code>)</li>
+                        <li>No elements have this display type by default <sup><a href="#ref-1">[1]</a></sup></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- --------------------------- -->
+            <!-- START DEMO OF DISPLAY TYPES -->
+            <!-- --------------------------- -->
+
+
+            <h3>Example of <code>display: none;</code></h3>
+
+            <div class="display-none-demo">
+                Normal Div
+            </div>
+            <div id="hidden-div" class="display-none-demo">
+                Hidden Div
+            </div>
+
+            <h3>Example of <code>display: inline;</code></h3>
+
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+            <span class="display-inline-demo">Inline Element</span>
+
+        </div>
+
+        <h3>Example of <code>display: block;</code></h3>
+        <div class="display-block-demo"></div>
+        <div class="display-block-demo">This Div will be taller because it has content</div>
+        <div class="display-block-demo" id="block-height-example">This block has its height set to 200px</div>
+        <div class="display-block-demo" id="block-width-example">This block has its width set to 50%</div>
+        <div class="display-block-demo" id="block-zero-dim-example">This block has its width and height set to 0</div>
+        
+        <hr>
+
+        <h3>Example of <code>display: inline-block</code></h3>
+        <ul>
+            <li>This is a normal list</li>
+            <li>By default the ul and li elements have the display type of block</li>
+            <li>This causes every list item to go on its own line</li>
+        </ul>
+
+        <ul class="display-inline-block-demo">
+            <li>This is not a normal list</li>
+            <li>This list has its items set to inline-block</li>
+            <li>There will be no line breaks as long as there is still room on the page</li>
+            <li id="inline-block-height-example">This has height set to 200px</li>
+            <li id="inline-block-width-example">This has width set to 400px</li>
+            <li id="inline-block-width-height-example">Both Width and Height set to 100px</li>
+            <li id="inline-block-full-width-example">Width is ALWAYS relative to the parent Element's width</li>
+            <li id="inline-block-double-height-example">height is the Element's content height. if you set a percent height is relative to the parent.</li>
+
+        </ul>
+
+        <footer>
+            <h5>References</h5>
+            <p id="ref-1">Jordan does not actually know if this is true. But I am fairly certain</p>
+        </footer>
+    </body>
+</html>

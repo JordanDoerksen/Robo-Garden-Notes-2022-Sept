@@ -1,0 +1,13 @@
+body{
+    background-color: #11151C;
+    color: #FFFFFF;
+    font-family: sans-serif;
+}
+
+a:link{
+    color: #7678ED;
+}
+
+a:visited{
+    color: #4f51a0;
+}

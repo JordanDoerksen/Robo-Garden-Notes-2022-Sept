@@ -1,0 +1,84 @@
+
+hr{
+    margin-top: 200px;
+}
+
+ul.no-bullets{
+    list-style-type: none;
+}
+
+.display-none-demo{
+    margin: 16px;
+    border: 4px solid #eccaa9;
+    padding: 16px;
+
+    background-color:#FB8B24;
+}
+
+#hidden-div{
+    display: none;
+}
+
+.display-inline-demo{
+    /* Uncommenting the next 3 lines will illustrate difficulty of styling inline items */
+    /* margin: 16px; */
+    /* border: 4px solid #d185a8; */
+    /* padding: 16px; */
+
+    /* Has no effect */
+    width: 500px;
+    height: 500px;
+
+    background-color: #D90368;
+}
+
+.display-block-demo{
+    margin: 16px;
+    border: 4px solid #a8a9eb;
+    padding: 16px;
+    background-color: #7678ED;
+}
+
+#block-height-example{
+    height: 200px;
+}
+
+#block-width-example{
+    width: 50%;
+}
+#block-zero-dim-example{
+    width: 0;
+    height: 0;
+}
+
+ul.display-inline-block-demo{
+    /* Uncomment below for example on how height is relative to parents */
+    /* height: 800px; */
+}
+
+ul.display-inline-block-demo > li{
+    display: inline-block;
+    background-color: #63D1DC;
+}
+
+#inline-block-height-example{
+    height: 200px;
+}
+
+#inline-block-width-example{
+    width: 400px;
+}
+
+#inline-block-width-height-example{
+    width: 100px;
+    height: 100px;
+}
+
+#inline-block-full-width-example{
+    width: 100%;
+}
+
+#inline-block-double-height-example{
+    /* The below line does nothing unless you uncomment line 56 */
+    height: 500%;
+}
