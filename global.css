@@ -53,6 +53,7 @@ a{
 header{
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
 
     background-color: var(--background-dark);
     color: var(--background-light);
@@ -151,3 +152,8 @@ header > nav{
 .active{
     background-color: var(--background-dark-light);
 }
+
+/* #main-content{
+    position: absolute;
+    z-index: -500;
+} */
