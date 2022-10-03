@@ -78,7 +78,7 @@ header > nav{
 .dropdown:hover .sub-menu{
     /* display: block; */
 
-    transform: translate(0,0)
+    transform: translate(0,0);
 }
 
 .sub-menu{
