@@ -1,73 +1,121 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-        <meta http-equiv="Expires" content="0">
-        <link rel="stylesheet" href="./global.css">
 
-        <title>
-            Robo Garden Notes Site
-        </title>
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="./global.css">
 
-        <style>
-            #show-hide-div-example{
-                height: 100px;
-                background-color: blueviolet;
-            }
-        </style>
+    <title>
+        Robo Garden Notes Site
+    </title>
 
-        <!-- <script>
+    <style>
+        #show-hide-div-example {
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        #color-output-example {
+            background-color: rgb(128, 128, 128);
+            /* background-color: #808080; */
+            /* background-color: rgba(128, 128, 128, 0.168); */
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+
+    <!-- <script>
             alert('hello');
         </script> -->
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 
-    </head>
+</head>
 
-    <body>
-        <header>
-            <img id="header-logo" width="256" height="61" src="./logo.svg"
-                alt="Robo Garden Logo with Tagline 'SEPT 2022 Full Stack Bootcamp Notes'">
-            <nav>
-                <ul id="header-main-menu">
-                    <li class="active"><a href="./index.html">Home</a></li>
-                    <li class="dropdown">
-                        <span>
-                            The Basics
-                            <ul class="sub-menu">
-                                <li><a href="#">Software Setup</a></li>
-                                <li><a href="./git-notes.html">GIT</a></li>
-                            </ul>
-                        </span>
-                    </li>
-                    <li class="dropdown">
-                        <span>
-                            Web Essentials
-                            <ul class="sub-menu">
-                                <li><a href="./html-notes.html">HTML</a></li>
-                                <li><a href="./css-notes.html">CSS</a></li>
-                                <li><a href="./js-notes.html">JS</a></li>
-                            </ul>
-                        </span>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+<body>
+    <header>
+        <img id="header-logo" width="256" height="61" src="./logo.svg"
+            alt="Robo Garden Logo with Tagline 'SEPT 2022 Full Stack Bootcamp Notes'">
+        <nav>
+            <ul id="header-main-menu">
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li class="dropdown">
+                    <span>
+                        The Basics
+                        <ul class="sub-menu">
+                            <li><a href="#">Software Setup</a></li>
+                            <li><a href="./git-notes.html">GIT</a></li>
+                        </ul>
+                    </span>
+                </li>
+                <li class="dropdown">
+                    <span>
+                        Web Essentials
+                        <ul class="sub-menu">
+                            <li><a href="./html-notes.html">HTML</a></li>
+                            <li><a href="./css-notes.html">CSS</a></li>
+                            <li><a href="./js-notes.html">JS</a></li>
+                        </ul>
+                    </span>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- <button onclick="alert('Hello, World!')">Press Me!</button> -->
+    <!-- <button onclick="alert('Hello, World!')">Press Me!</button> -->
 
-        <div id="main-content">
-            <h1>Welcome to Robo Garden Notes Site</h1>
-            <a href="www.test.test.com"> Example</a>
+    <div id="main-content">
+        <h1>JS Notes</h1>
 
-            <button>Show Div</button>
-            <div id="show-hide-div-example"></div>
+        <div id="js-rgb-to-hex-calc">
+            <div>
+                <label for="red-input">RED:</label>
+                <input id="red-input" name="red-input" type="number" min="0" max="255" value="128">
+            </div>
+            <div>
+                <label for="green-input">GRN:</label>
+                <input id="green-input" name="green-input" type="number" min="0" max="255" value="128">
+            </div>
+            <div>
+                <label for="blue-input">BLU:</label>
+                <input id="blue-input" name="blue-input" type="number" min="0" max="255" value="128">
+            </div>
+            <button onclick="convertToHex()">Convert to Hex</button>
+            <div>
+                <label for="hex-output">HEX:</label>
+                <input id="hex-output" name="hex-output" type="text" maxlength="7" disabled>
+            </div>
+            <div id="color-output-example"></div>
         </div>
-        
-        <footer>
+        <!-- <div>
+                <div>
+                    <h3>Favorite time of day</h3><br><br>
+                    <label for="morning">Morning</label>
+                    <input type="radio" id="morning" name="timeOfDay" value="morning"><br>
 
-        </footer>
+                    <label for="afternoon">Afternoon</label>
+                    <input type="radio" id="afternoon" name="timeOfDay" value="afternoon"><br>
 
-    </body>
+                    <label for="evening">Evening</label>
+                    <input type="radio" id="evening" name="timeOfDay" value="evening"><br><br><br>
+
+                </div>
+            </div> -->
+
+        <a href="www.test.test.com"> Example</a>
+
+        <!-- <button>Show Div</button>
+            <div id="show-hide-div-example"> -->
+
+    </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+
 </html>
