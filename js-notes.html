@@ -16,13 +16,15 @@
             height: 100px;
             background-color: blueviolet;
         }
-
         #color-output-example {
             background-color: rgb(128, 128, 128);
             /* background-color: #808080; */
             /* background-color: rgba(128, 128, 128, 0.168); */
             height: 100px;
             width: 100px;
+        }
+        #js-rgb-to-hex-calc{
+            display: none;
         }
     </style>
 
@@ -69,6 +71,7 @@
     <div id="main-content">
         <h1>JS Notes</h1>
 
+       
         <div id="js-rgb-to-hex-calc">
             <div>
                 <label for="red-input">RED:</label>
@@ -82,13 +85,17 @@
                 <label for="blue-input">BLU:</label>
                 <input id="blue-input" name="blue-input" type="number" min="0" max="255" value="128">
             </div>
-            <button onclick="convertToHex()">Convert to Hex</button>
+            <!-- <button onclick="convertToHex()">Convert to Hex</button> -->
+            <button id="convert-to-hex">Convert to Hex</button>
             <div>
                 <label for="hex-output">HEX:</label>
                 <input id="hex-output" name="hex-output" type="text" maxlength="7" disabled>
             </div>
             <div id="color-output-example"></div>
         </div>
+        <noscript>
+            You must have JavaScript enabled to use this page
+        </noscript>
         <!-- <div>
                 <div>
                     <h3>Favorite time of day</h3><br><br>
