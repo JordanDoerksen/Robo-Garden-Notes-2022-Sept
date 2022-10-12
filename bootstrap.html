@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <script src="./lib/bootstrap-5.2.2-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+<div id="main-content">
+
+            <h1>Bootstrap demo</h1>
+
+            <div>
+                <h2>IMPORTANT</h2>
+                <ul>
+                    <li>Width usually is determined by parent</li>
+
+                </ul>
+            </div>
+
+
+            <h2>There are 4 main display behaviors (Types of rendering box)</h2>
+
+            <ul class="">
+                <li>
+                    <h3><code>display: none;</code></h3>
+                    <ul>
+                        <li>Elements will not be rendered (but still exist in the DOM)</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><code>display: inline;</code></h3>
+                    <ul>
+                        <li>Elements will not start on a new line (No line break before element)</li>
+                        <li>Elements will only take as much width as necessary (Width depends on content)</li>
+                        <li>Width and Height properties will have no effect</li>
+                        <li>Default for elements <code>&lt;span&gt;,&lt;a&gt;,&lt;img&gt;</code></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><code>display: block;</code></h3>
+                    <ul>
+                        <li>Element will always start on a new line (Line break comes before element)</li>
+                        <li>Element takes up all available width (Inherit from parents, Default HTML behavior)</li>
+                        <li>Element takes up as little height as possible to show content (Inherit from child, Default HTML behavior)</li>
+                        <li>Width and Height properties can be set</li>
+                        <li><code>&lt;div&gt;,&lt;h1&gt;-&lt;h6&gt;,&lt;p&gt;,&lt;form&gt;,&lt;header&gt;,&lt;footer&gt;,&lt;section&gt;</code></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><code>display: inline-block;</code></h3>
+                    <ul>
+                        <li>Element will not start on new line (Just like <code>display: inline;</code>)</li>
+                        <li>Element will only take as much width as necessary  (Just like <code>display: inline;</code>)</li>
+                        <li>Width and Height properties can be set. (Just like <code>display: block;</code>)</li>
+                        <li>No elements have this display type by default <sup><a href="#ref-1">[1]</a></sup></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- --------------------------- -->
+            <!-- START DEMO OF DISPLAY TYPES -->
+            <!-- --------------------------- -->
+
+
+            <h3>Example of <code>display: none;</code></h3>
+
+            <div class="">
+                Normal Div
+            </div>
+            <div id="" class="">
+                Hidden Div
+            </div>
+
+
+
+        </div>
+
+        <hr>
+
+        <h3>Example of <code>display: inline-block</code></h3>
+        <ul>
+            <li>This is a normal list</li>
+            <li>By default the ul and li elements have the display type of block</li>
+            <li>This causes every list item to go on its own line</li>
+        </ul>
+
+</html>
