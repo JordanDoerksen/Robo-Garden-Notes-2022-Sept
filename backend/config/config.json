@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "password",
+    "database": "dev_robo_notes",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "sandbox": {
+    "username": "root",
+    "password": "USE ENV VARIABLE",
+    "database": "database_sandbox",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "USE ENV VARIABLE",
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

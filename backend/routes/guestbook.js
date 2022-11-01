@@ -20,6 +20,13 @@ router.post('/sign-guestbook', function(req, res, next){
     let currentDisplayName = req.body.displayName;
     let currentEmail = req.body.email;
     let currentMessage = req.body.message;
+
+    let currentGuestBookEntry = new GuestBookEntry(currentFirstName,currentLastName,currentDisplayName,currentEmail,currentMessage);
+
+    guestBook.push(currentGuestBookEntry);
+
+    res.status(201).send(currentGuestBookEntry);
+
 });
 
 module.exports = router;
