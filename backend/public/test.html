@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+</head>
+<body>
+    <h2>Create Guest Book Entry Test</h2>
+    <form action="http://localhost:3000/guestbook/sign-guestbook" method="POST">
+        <input name="firstName" type="text" placeholder="First Name">
+        <input name="lastName" type="text" placeholder="Last Name">
+        <input name="displayName" type="text" placeholder="Display Name">
+        <input name="email" type="email" placeholder="Email">
+        <input name="message" type="text" placeholder="Message">
+        <!-- <input type="submit" value="Submit"> -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
