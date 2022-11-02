@@ -4,12 +4,14 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
 
-    await queryInterface.bulkInsert('GuestBookEntry', [{
+    await queryInterface.bulkInsert('guestbookentries', [{
       firstName: "Jordan",
       lastName: "Doerksen",
       displayName: "PersistentCoder",
       email: "jordan.doerksen@robogarden.ca",
-      message: "Hello, World!"
+      message: "Hello, World!",
+      createdAt: new Date(),
+      updatedAt: new Date()
      }], {});
   },
 

@@ -1,31 +1,37 @@
+const e = require('express');
 var express = require('express');
 var router = express.Router();
-const GuestBookEntry = require('../models/GuestBookEntry');
-
-// const guestBook = [new GuestBookEntry("firstName", "lastName", "displayName", "email", "message")];
-const guestBook = [];
+const GuestBookEntry = require('../models/index').GuestBookEntry;
 
 /* GET guestbook listing. */
-router.get('/', function(req, res, next) {
-    if(guestBook.length > 0){
-        res.status(200).send(guestBook);
-    }else{
-        res.status(204).send();
-    }
+router.get('/', function (req, res, next) {
+    GuestBookEntry.findAll().then((result)=>{
+        res.status(200).send((result));
+    }).catch((e)=>{
+        //TODO: Remove returning error to client in Production
+        res.status(500).send(e);
+    })
 });
 
-router.post('/sign-guestbook', function(req, res, next){
+router.post('/sign-guestbook', function (req, res, next) {
     let currentFirstName = req.body.firstName;
     let currentLastName = req.body.lastName;
     let currentDisplayName = req.body.displayName;
     let currentEmail = req.body.email;
     let currentMessage = req.body.message;
 
-    let currentGuestBookEntry = new GuestBookEntry(currentFirstName,currentLastName,currentDisplayName,currentEmail,currentMessage);
-
-    guestBook.push(currentGuestBookEntry);
-
-    res.status(201).send(currentGuestBookEntry);
+    GuestBookEntry.create({
+        firstName: currentFirstName,
+        lastName: currentLastName,
+        displayName: currentDisplayName,
+        email: currentEmail,
+        message: currentMessage
+    }).then((result)=>{
+        res.status(201).send(result);
+    }).catch((e)=>{
+        //TODO: Remove returning error to client in Production
+        res.status(500).send(e);
+    });
 
 });
 
