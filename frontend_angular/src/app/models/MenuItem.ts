@@ -15,4 +15,8 @@ export class MenuItem{
         this.isActive = isActive;
         this.children = children;
     }
+
+    public hasChildren():boolean{
+        return this.children.length != 0;
+    }
 }
