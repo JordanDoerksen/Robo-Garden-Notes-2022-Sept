@@ -25,4 +25,32 @@
             </li>
         </ul>
     </nav>
-  </header>
+</header>
+
+<header>
+    <img id="header-logo" width="256" height="61" src="./assets/img/logo.svg"
+        alt="Robo Garden Logo with Tagline 'SEPT 2022 Full Stack Bootcamp Notes'">
+    <nav>
+        <ul id="header-main-menu">
+            <li [class.active]="item.isActive" [class.dropdown]="item.children.length != 0" *ngFor="let item of this.menu">
+
+
+            </li>
+
+
+
+            <li><a href="./index.html">Home</a></li>
+            <li class="dropdown">
+                <span>
+                    The Basics
+                    <ul class="sub-menu">
+                        <li><a href="#">Software Setup</a></li>
+                    </ul>
+                </span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+{{this.menu | json}}

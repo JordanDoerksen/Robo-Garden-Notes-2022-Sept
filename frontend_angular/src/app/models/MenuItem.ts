@@ -1,18 +1,18 @@
-class MenuItem{
-    title:string;
+export class MenuItem{
+    key:string;
     url:string;
     isActive:boolean;
-    subMenu:Array<MenuItem>;
+    children:Array<MenuItem>;
 
     public constructor(
-        title:string,
+        key:string,
         url:string,
         isActive:boolean,
-        subMenu:Array<MenuItem>
+        children:Array<MenuItem>
     ){
-        this.title = title;
+        this.key = key;
         this.url = url;
         this.isActive = isActive;
-        this.subMenu = subMenu;
+        this.children = children;
     }
 }
