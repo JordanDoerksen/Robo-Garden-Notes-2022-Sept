@@ -51,3 +51,12 @@ npx sequelize-cli seed:generate --name demo-guest-book-entry
 
  npx sequelize-cli db:seed:all
 ```
+
+
+
+### Notes
+
+- [X] Recreate Database
+- [X] Create View for guestbook
+- [ ] Create a service for backend api
+- [x] Create route (frontend)
