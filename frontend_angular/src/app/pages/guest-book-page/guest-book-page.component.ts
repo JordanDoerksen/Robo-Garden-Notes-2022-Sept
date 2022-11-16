@@ -9,13 +9,14 @@ import {GuestBookEntry} from "../../models/GuestBookEntry";
 })
 export class GuestBookPageComponent implements OnInit {
 
+  guestBookData: GuestBookEntry[] | undefined;
+
   constructor(private _roboApi:RoboGardenNotesApiService) { }
 
 
   ngOnInit(): void {
-    this._roboApi.getAllGuestBookSignatures().subscribe(value => {
-      console.log(value)
-    })
+    this._roboApi.getAllGuestBookSignatures().subscribe((data:GuestBookEntry[]) => this.guestBookData = {...data});
+    console.log(this.guestBookData);
   }
 
 }
