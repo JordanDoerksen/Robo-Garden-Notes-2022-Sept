@@ -15,8 +15,10 @@ export class GuestBookPageComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this._roboApi.getAllGuestBookSignatures().subscribe((data:GuestBookEntry[]) => this.guestBookData = {...data});
-    console.log(this.guestBookData);
+    this._roboApi.getAllGuestBookSignatures().subscribe((data:GuestBookEntry[]) => {
+      this.guestBookData = {...data}
+      console.log(this.guestBookData);
+    });
   }
 
 }
