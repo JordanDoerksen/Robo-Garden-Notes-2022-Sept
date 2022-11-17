@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GuestBookEntry } from 'src/app/models/GuestBookEntry';
 import { RoboGardenNotesApiService } from 'src/app/services/robo-garden-notes-api.service';
 
 @Component({
@@ -10,8 +11,11 @@ export class GuestBookPageComponent implements OnInit {
 
   constructor(private _roboApi:RoboGardenNotesApiService) { }
 
-  ngOnInit(): void {
-    this._roboApi.getAllGuestBookSignatures();
-  }
+  guestBookData: GuestBookEntry[] | undefined;
 
+  ngOnInit(): void {
+    this._roboApi.getAllGuestBookSignatures().subscribe((data:GuestBookEntry[])=>{
+      this.guestBookData = {...data};
+    });
+  }
 }

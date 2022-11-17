@@ -1,1 +1,14 @@
-<p>guest-book-page works!</p>
+<h2>Welcome to the Guest Book</h2>
+
+<table>
+    <thead>
+        <tr><th>Display Name</th><th>Message</th></tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let entry of this.guestBookData">
+            <td>{{entry.displayName}}</td><td>{{entry.message}}</td>
+        </tr> -->
+    </tbody>
+</table>
+
+{{this.guestBookData | json}}

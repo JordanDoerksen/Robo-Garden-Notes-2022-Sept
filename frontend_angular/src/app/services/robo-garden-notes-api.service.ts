@@ -11,10 +11,8 @@ export class RoboGardenNotesApiService {
 
   constructor(private _http:HttpClient) { }
 
-  public async getAllGuestBookSignatures():Observable<Array<GuestBookEntry>> {
-    //TODO: Use URL CLASS Instead of STRING manipulation
-    return await this._http.get(environment.ROBO_API_URL+'guestbook');
-    // return new Array<GuestBookEntry>;
+  public getAllGuestBookSignatures():Observable<GuestBookEntry[]> {
+    return this._http.get<GuestBookEntry[]>(environment.ROBO_API_URL+'guestbook');
   }
 
 }
