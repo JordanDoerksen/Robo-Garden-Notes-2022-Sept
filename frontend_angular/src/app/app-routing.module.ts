@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GuestBookPageComponent } from './pages/guest-book-page/guest-book-page.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'',component:HomePageComponent},
   {path:'guestbook',component:GuestBookPageComponent}
 ];
 

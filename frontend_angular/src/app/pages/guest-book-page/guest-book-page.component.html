@@ -1,14 +1,21 @@
 <h2>Welcome to the Guest Book</h2>
 
-<table>
-    <thead>
-        <tr><th>Display Name</th><th>Message</th></tr>
-    </thead>
-    <tbody>
-        <!-- <tr *ngFor="let entry of this.guestBookData">
-            <td>{{entry.displayName}}</td><td>{{entry.message}}</td>
-        </tr> -->
-    </tbody>
-</table>
 
-{{this.guestBookData | json}}
+<div *ngIf="this.isLoading then showLoading else showTable"></div>
+<ng-template #showLoading>
+    <div class="loading-spinner">
+        <p>Loading...</p>
+    </div>
+</ng-template>
+<ng-template #showTable>
+    <table>
+        <thead>
+            <tr><th>Display Name</th><th>Message</th></tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let entry of this.guestBookData">
+                <td>{{entry.displayName}}</td><td>{{entry.message}}</td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

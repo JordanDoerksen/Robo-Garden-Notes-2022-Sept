@@ -1,20 +1,21 @@
-export interface GuestBookEntry{
-    id:number;
-    firstName:string;
-    lastName:string;
-    displayName:string;
-    email:string;
-    message:string;
-    createdAt:Date;
-    updatedAt:Date;
+import { iGuestBookEntry } from './interfaces/iGuestBookEntry';
 
-    // constructor(firstName:string,lastName:string,displayName:string,email:string,message:string,createdAt:Date,updatedAt:Date){
-    //     this.firstName = firstName;
-    //     this.lastName = lastName;
-    //     this.displayName = displayName;
-    //     this.email = email;
-    //     this.message = message;
-    //     this.createdAt = createdAt;
-    //     this.updatedAt = updatedAt;
-    // }
+export class GuestBookEntry implements iGuestBookEntry{
+  firstName: string;
+  lastName: string;
+  displayName: string;
+  email: string;
+  message: string;
+  createdAt: Date;
+  updatedAt: Date;
+
+  constructor(firstName: string, lastName: string, displayName: string, email: string, message: string, createdAt: Date, updatedAt: Date) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.displayName = displayName;
+    this.email = email;
+    this.message = message;
+    this.createdAt = createdAt;
+    this.updatedAt = updatedAt;
+  }
 }

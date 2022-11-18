@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './pages/partials/header/header.component';
+import { FooterComponent } from './pages/partials/footer/footer.component';
 import { GuestBookPageComponent } from './pages/guest-book-page/guest-book-page.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderComponent,
     FooterComponent,
     GuestBookPageComponent,
-    HomeComponent
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

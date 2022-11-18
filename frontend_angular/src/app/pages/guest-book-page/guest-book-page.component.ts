@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GuestBookEntry } from 'src/app/models/GuestBookEntry';
 import { RoboGardenNotesApiService } from 'src/app/services/robo-garden-notes-api.service';
+import {iShowGuestBookEntryDto} from "../../models/dto/iShowGuestBookEntryDto";
 
 @Component({
   selector: 'app-guest-book-page',
@@ -11,11 +11,13 @@ export class GuestBookPageComponent implements OnInit {
 
   constructor(private _roboApi:RoboGardenNotesApiService) { }
 
-  guestBookData: GuestBookEntry[] | undefined;
+  isLoading: boolean = true;
+  guestBookData: iShowGuestBookEntryDto[] | undefined;
 
   ngOnInit(): void {
-    this._roboApi.getAllGuestBookSignatures().subscribe((data:GuestBookEntry[])=>{
-      this.guestBookData = {...data};
+    this._roboApi.getAllGuestBookSignatures().subscribe((data:iShowGuestBookEntryDto[])=>{
+      this.guestBookData = data;
+      this.isLoading = false;
     });
   }
 }

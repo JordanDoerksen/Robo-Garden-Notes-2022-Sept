@@ -3,10 +3,16 @@ var express = require('express');
 var router = express.Router();
 const GuestBookEntry = require('../models/index').GuestBookEntry;
 
+// const { promisify } = require('util');
+// const sleep = promisify(setTimeout);
+// sleep(500).then(()=>{
+// });
+
+
 /* GET guestbook listing. */
 router.get('/', function (req, res, next) {
     GuestBookEntry.findAll().then((result)=>{
-        res.status(200).send((result));
+            res.status(200).send((result));
     }).catch((e)=>{
         //TODO: Remove returning error to client in Production
         res.status(500).send(e);
