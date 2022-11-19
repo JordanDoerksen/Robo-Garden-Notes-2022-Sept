@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RoboGardenNotesApiService } from 'src/app/services/robo-garden-notes-api.service';
+import { RoboGardenNotesApiService } from 'src/app/services/api/robo-garden-notes-api.service';
 import {iShowGuestBookEntryDto} from "../../models/dto/iShowGuestBookEntryDto";
 
 @Component({

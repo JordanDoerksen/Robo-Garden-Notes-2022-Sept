@@ -8,6 +8,8 @@ import { HeaderComponent } from './pages/partials/header/header.component';
 import { FooterComponent } from './pages/partials/footer/footer.component';
 import { GuestBookPageComponent } from './pages/guest-book-page/guest-book-page.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { GuestBookEntryFormComponent } from './pages/partials/guest-book-entry-form/guest-book-entry-form.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,12 +17,15 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     HeaderComponent,
     FooterComponent,
     GuestBookPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    GuestBookEntryFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
-export interface iCreateGuestBookEntryDto {
+
+export interface iShowGuestBookEntryDto {
   firstName:string;
   lastName:string;
   displayName:string;

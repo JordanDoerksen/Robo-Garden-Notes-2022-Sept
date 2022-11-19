@@ -11,7 +11,10 @@ const GuestBookEntry = require('../models/index').GuestBookEntry;
 
 /* GET guestbook listing. */
 router.get('/', function (req, res, next) {
-    GuestBookEntry.findAll().then((result)=>{
+    //TODO: Replace hard coded attributes below with attributes from an interface or JS equivalent
+    GuestBookEntry.findAll({
+        attributes:['displayName','message','createdAt']
+    }).then((result)=>{
             res.status(200).send((result));
     }).catch((e)=>{
         //TODO: Remove returning error to client in Production

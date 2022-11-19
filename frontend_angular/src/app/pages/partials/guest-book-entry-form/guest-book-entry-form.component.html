@@ -1,0 +1,29 @@
+<form #guestBookForm="ngForm">
+  <div>
+    <label for="firstName">First Name</label>
+    <input id="firstName" name="firstName" type="text" [(ngModel)]="this.guestBookFormInput.firstName">
+  </div>
+  <div>
+    <label for="lastName">Last Name</label>
+    <input id="lastName" name="lastName" type="text" [(ngModel)]="this.guestBookFormInput.lastName">
+  </div>
+  <div>
+    <label for="displayName">Display Name</label>
+    <input id="displayName" name="displayName" type="text" [(ngModel)]="this.guestBookFormInput.displayName">
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" [(ngModel)]="this.guestBookFormInput.email">
+  </div>
+  <div>
+    <label for="message">Message</label>
+    <input id="message" name="message" type="text" [(ngModel)]="this.guestBookFormInput.message">
+  </div>
+  <div>
+    <button type="submit">Create Guest Book Entry</button>
+  </div>
+</form>
+
+<!--{{guestBookForm.value | json}}-->
+
+

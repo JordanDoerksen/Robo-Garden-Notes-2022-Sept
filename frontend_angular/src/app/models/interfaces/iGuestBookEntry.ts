@@ -1,4 +1,3 @@
-
 export interface iGuestBookEntry {
     firstName:string;
     lastName:string;
